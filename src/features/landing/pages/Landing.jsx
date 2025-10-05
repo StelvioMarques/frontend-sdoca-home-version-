@@ -35,7 +35,7 @@ export default function Landing() {
 
           <div className="flex flex-col items-center justify-center gap-2 text-center">
             <h2 className="text-3xl tracking-tighter md:text-5xl font-regular text-secondary-foreground">
-              Gestão documental simplificada
+              Gestão documental simplificada (teste)
             </h2>
 
             <p className="max-w-xl text-lg leading-relaxed text-center text-muted-foreground">
