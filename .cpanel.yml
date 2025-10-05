@@ -1,0 +1,17 @@
+---
+deployment:
+  tasks:
+    # Caminho da pasta pública onde teu site deve aparecer
+    - export DEPLOYPATH=/home/sdocaita/app.sdoca.it.ao/
+
+    # Vai até o repositório clonado
+    - cd /home/sdocaita/repositories/frontend-sdoca-home-version-
+
+    # Instala dependências (se necessário)
+    - /bin/npm install
+
+    # Gera o build do Vite
+    - /bin/npm run build
+
+    # Copia o resultado pra pasta pública
+    - /bin/cp -R dist/* $DEPLOYPATH
