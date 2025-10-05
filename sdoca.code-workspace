@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "../Startkit-React"
+        },
+        {
+            "path": "../san-service"
+        }
+    ]
+}

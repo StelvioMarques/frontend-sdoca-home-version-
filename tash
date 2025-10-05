@@ -1,0 +1,11 @@
+[33mad389dc[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: pull --tags origin main: Fast-forward
+[33m334a139[m HEAD@{1}: commit: - Ajuste na timeline do doc;
+[33me6195a9[m HEAD@{2}: commit: - Dados dos cards;
+[33m2e0a326[m HEAD@{3}: commit: - Ajuste no carregamento das notificações;
+[33mbfb11f6[m HEAD@{4}: pull --tags origin main: Fast-forward
+[33m6544660[m HEAD@{5}: commit: Validações a 80%. falta o edit de user e o create de docs(validar quando não enviado nenhuma area de origem nem destino);
+[33mf9d92a9[m HEAD@{6}: pull --tags origin main: Fast-forward
+[33ma364eb9[m HEAD@{7}: commit: Validações de campos do form de documentos, user(por terminar).
+[33m0a7dc3c[m HEAD@{8}: commit (merge): Merge branches 'main' and 'main' of https://github.com/SistemaSdoc/React-Front-Sdoca
+[33m5ee8059[m HEAD@{9}: commit: Nome do usuário logado, loader novo e preview em nova aba.
+[33m6980639[m HEAD@{10}: clone: from https://github.com/SistemaSdoc/React-Front-Sdoca.git

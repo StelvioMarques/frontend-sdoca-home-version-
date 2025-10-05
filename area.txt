@@ -1,0 +1,505 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use App\Models\Areas;
+
+class AreaSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+
+        // ================== Áreas ===============================
+
+        #1
+        // gabinete da administradora
+        $author = Areas::create([
+            'depart_id' => 1,
+            'name_area' => 'Secretariado da Administradora',
+            'slogan_area' => 'SADM',
+            'telefone_area' => '941492001',
+            'email_area' => 'secretaria.admin@gmail.com',
+            'descricao_area' => 'Área do gabinete da Admin',
+        ]);
+
+        #2
+        // gabinete da Admin. Adj. p/Área Política, Social e da Comunicação
+        $author = Areas::create([
+            'depart_id' => 2,
+            'name_area' => 'Secretariado da Admin. Adj. p/Área Política, Social e da Comunicação',
+            'slogan_area' => 'SADMAREA',
+            'telefone_area' => '941492002',
+            'email_area' => 'secretaria.admin1@gmail.com',
+            'descricao_area' => 'Área do gabinete da Admin',
+        ]);
+
+        #3
+        // gabinete da Admin. Adj. p/Área Técnica, Infra-Estrutura e Serviços Comunitários
+        $author = Areas::create([
+            'depart_id' => 3,
+            'name_area' => 'Secretariado da Admin. Adj. p/Área Técnica, Infra-Estrutura e Serviços Comunitários',
+            'slogan_area' => 'SADMATISC',
+            'telefone_area' => '941492003',
+            'email_area' => 'secretaria.admin2@gmail.com',
+            'descricao_area' => 'Área do gabinete da Admin',
+        ]);
+
+        #4
+        // gabinete da Admin. Adj. p/Área Económica e Financeira
+        $author = Areas::create([
+            'depart_id' => 4,
+            'name_area' => 'Secretariado da Admin. Adj. p/Área Económica e Financeira',
+            'slogan_area' => 'SADM-AEF',
+            'telefone_area' => '941492004',
+            'email_area' => 'secretaria.admin3@gmail.com',
+            'descricao_area' => 'Área do gabinete da Admin',
+        ]);
+
+        #5
+        // secretaria
+        $author = Areas::create([
+            'depart_id' => 5,
+            'name_area' => 'Secção de Orçamento e Finanças',
+            'slogan_area' => 'SOF',
+            'telefone_area' => '911492005',
+            'email_area' => 'seccao.o.f@gmail.com',
+            'descricao_area' => 'Área do gabinete da Secretaria Geral',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 5,
+            'name_area' => 'Secção de Contratação Pública',
+            'slogan_area' => 'SCP',
+            'telefone_area' => '911492006',
+            'email_area' => 'seccao.contratacao@gmail.com',
+            'descricao_area' => 'Área do gabinete da Secretaria Geral',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 5,
+            'name_area' => 'Secção Património, Logística e Protocolo',
+            'slogan_area' => 'SPLP',
+            'telefone_area' => '941492007',
+            'email_area' => 'slpl@gmail.com',
+            'descricao_area' => 'Área do gabinete da Secretaria Geral',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 5,
+            'name_area' => 'Expedientes',
+            'slogan_area' => 'EXP',
+            'telefone_area' => '941492008',
+            'email_area' => 'expedientes@gmail.com',
+            'descricao_area' => 'Área do gabinete da Secretaria Geral',
+        ]);
+
+        #6
+        // Gabinete de Estudos, Planeamento e Estatística
+        $author = Areas::create([
+            'depart_id' => 6,
+            'name_area' => 'Secção de Estudo e Estatística',
+            'slogan_area' => 'SEE',
+            'telefone_area' => '941492009',
+            'email_area' => 'estudo-estatistica@gmail.com',
+            'descricao_area' => 'Área do gabinete do GEPE',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 6,
+            'name_area' => 'Secção de Planeamento',
+            'slogan_area' => 'SP',
+            'telefone_area' => '941492010',
+            'email_area' => 'seccao-planeamento@gmail.com',
+            'descricao_area' => 'Área do gabinete do GEPE',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 6,
+            'name_area' => 'Secção de Monitoramento e Controlo',
+            'slogan_area' => 'SMC',
+            'telefone_area' => '941492011',
+            'email_area' => 'seccao-monitoramento@gmail.com',
+            'descricao_area' => 'Área do gabinete do GEPE',
+        ]);
+
+        #7
+        // Gabinete Jurídico, Intercâmbio e Apoio às Comissões de Moradores
+        $author = Areas::create([
+            'depart_id' => 7,
+            'name_area' => 'Secção dos Assuntos Jurídicos, Contenciosos e Intercâmbio',
+            'slogan_area' => 'SAJCI',
+            'telefone_area' => '941492012',
+            'email_area' => 'assuntos.juridicos@gmail.com',
+            'descricao_area' => 'Área do gabinete Jurídico',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 7,
+            'name_area' => 'Secção de Acompanhamento e Apoio às Comissões de Moradores',
+            'slogan_area' => 'SAACM',
+            'telefone_area' => '941492013',
+            'email_area' => 'acompanhamento.apoio@gmail.com',
+            'descricao_area' => 'Área do gabinete Jurídico',
+        ]);
+
+        #8
+        // Gabinete Gabinete de Recursos Humanos
+        $author = Areas::create([
+            'depart_id' => 8,
+            'name_area' => 'Secção de Gestão Administrativa',
+            'slogan_area' => 'SGA',
+            'telefone_area' => '941492014',
+            'email_area' => 'gestao.administrativa@gmail.com',
+            'descricao_area' => 'Área do gabinete de Recursos Humanos',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 8,
+            'name_area' => 'Secção de Gestão de Carreiras e Capacitação Técnica',
+            'slogan_area' => 'SGCCT',
+            'telefone_area' => '941492015',
+            'email_area' => 'gestao.carreiras@gmail.com',
+            'descricao_area' => 'Área do gabinete de Recursos Humanos',
+        ]);
+
+        #9
+        // Gabinete Comunicação Social
+        $author = Areas::create([
+            'depart_id' => 9,
+            'name_area' => 'Secção de Comunicação Social e Imprensa',
+            'slogan_area' => 'SCSI',
+            'telefone_area' => '941492016',
+            'email_area' => 'comunicao.social@gmail.com',
+            'descricao_area' => 'Área do gabinete de Comunicação Social',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 9,
+            'name_area' => 'Secção para Documentação e Informação',
+            'slogan_area' => 'SDI',
+            'telefone_area' => '941492017',
+            'email_area' => 'documento.info@gmail.com',
+            'descricao_area' => 'Área do gabinete de Comunicação Social',
+        ]);
+
+        #10
+        // Direcção Municipal da Educação
+        $author = Areas::create([
+            'depart_id' => 10,
+            'name_area' => 'Secção de Educação e Ensino',
+            'slogan_area' => 'SEE',
+            'telefone_area' => '941492018',
+            'email_area' => 'educacao.ensino@gmail.com',
+            'descricao_area' => 'Área da direcção Municipal da Educação',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 10,
+            'name_area' => 'Secção de Planeamento, Estatística e Recursos Humanos',
+            'slogan_area' => 'SPERH',
+            'telefone_area' => '941492019',
+            'email_area' => 'plameamento@gmail.com',
+            'descricao_area' => 'Área da direcção Municipal da Educação',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 10,
+            'name_area' => 'Secção de Inspecção e Supervisão Pedagógica',
+            'slogan_area' => 'SISP',
+            'telefone_area' => '941492020',
+            'email_area' => 'inspecção@gmail.com',
+            'descricao_area' => 'Área da direcção Municipal da Educação',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 10,
+            'name_area' => 'Secção de Ciências, Tecnologia e Inovação',
+            'slogan_area' => 'SCTI',
+            'telefone_area' => '941492021',
+            'email_area' => 'ciencias.tecnologia@gmail.com',
+            'descricao_area' => 'Área da direcção Municipal da Educação',
+        ]);
+
+        #11
+        // Direcção Municipal da Saúde
+        $author = Areas::create([
+            'depart_id' => 11,
+            'name_area' => 'Secção de Logística Hospitalar e Depósito de Medicamentos',
+            'slogan_area' => 'SLHDM',
+            'telefone_area' => '941492022',
+            'email_area' => 'logistica@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal da Saúde',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 11,
+            'name_area' => 'Secção de Estatística, Planeamento e Recursos Humanos',
+            'slogan_area' => 'SEPRH',
+            'telefone_area' => '941492023',
+            'email_area' => 'estatistica@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal da Saúde',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 11,
+            'name_area' => 'Secção de Saúde Pública',
+            'slogan_area' => 'SSP',
+            'telefone_area' => '941492024',
+            'email_area' => 'saude.publica@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal da Saúde',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 11,
+            'name_area' => 'Secção de Inspecção de Saúde',
+            'slogan_area' => 'SIS',
+            'telefone_area' => '941492025',
+            'email_area' => 'inspecao.saude@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal da Saúde',
+        ]);
+
+        #12
+        // Direcção Municipal de Promoção de Desenvolvimento Económico Integrado
+        $author = Areas::create([
+            'depart_id' => 12,
+            'name_area' => 'Secção de Promoção do Desenvolvimento Económico Integrado',
+            'slogan_area' => 'SPDEI',
+            'telefone_area' => '941492026',
+            'email_area' => 'programacao.desenvolvimento@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal de Promoção de Desenvolvimento Económico Integrado',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 12,
+            'name_area' => 'Secção de Licenciamento das Actividades Económicas e Serviços',
+            'slogan_area' => 'SLAES',
+            'telefone_area' => '941492027',
+            'email_area' => 'licenciamento.actividades@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal de Promoção de Desenvolvimento Económico Integrado',
+        ]);
+
+        #13
+        // Direcção Municipal do Ambiente e Saneamento Básico
+        $author = Areas::create([
+            'depart_id' => 13,
+            'name_area' => 'Secção do Ambiente',
+            'slogan_area' => 'SA',
+            'telefone_area' => '941492028',
+            'email_area' => 'seccao.ambiente@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal do Ambiente e Saneamento Básico',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 13,
+            'name_area' => 'Secção do Saneamento Básico',
+            'slogan_area' => 'SA',
+            'telefone_area' => '941492029',
+            'email_area' => 'seccao.saneamento.basico@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal do Ambiente e Saneamento Básico',
+        ]);
+
+        #14
+        // Direcção Municipal dos Transportes, Tráfego e Mobilidade
+        $author = Areas::create([
+            'depart_id' => 14,
+            'name_area' => 'Secção de Transportes',
+            'slogan_area' => 'ST',
+            'telefone_area' => '941492030',
+            'email_area' => 'seccao.transportes@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal dos Transportes, Tráfego e Mobilidade',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 14,
+            'name_area' => 'Secção de Tráfego e Mobilidade',
+            'slogan_area' => 'STM',
+            'telefone_area' => '941492031',
+            'email_area' => 'seccao.trafego.mobilidade@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal dos Transportes, Tráfego e Mobilidade',
+        ]);
+
+        #15
+        // Direcção Municipal da Acção Social, Família e Igualdade do Género
+        $author = Areas::create([
+            'depart_id' => 15,
+            'name_area' => 'Secção de Acção Social',
+            'slogan_area' => 'SAC',
+            'telefone_area' => '941492032',
+            'email_area' => 'accao.social@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal da Acção Social, Família e Igualdade do Género',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 15,
+            'name_area' => 'Secção de Família e Igualdade do Género',
+            'slogan_area' => 'SFIG',
+            'telefone_area' => '941492033',
+            'email_area' => 'familia.igualdade.genero@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal da Acção Social, Família e Igualdade do Género',
+        ]);
+
+        #16
+        // Direcção Municipal do Turismo e Cultura
+        $author = Areas::create([
+            'depart_id' => 16,
+            'name_area' => 'Secção de Turismo',
+            'slogan_area' => 'ST',
+            'telefone_area' => '941492034',
+            'email_area' => 'turismo@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal do Turismo e Cultura',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 16,
+            'name_area' => 'Secção de Promoção da Cultura',
+            'slogan_area' => 'SPC',
+            'telefone_area' => '941492035',
+            'email_area' => 'promocao.cultura@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal do Turismo e Cultura',
+        ]);
+
+
+        #17
+        // Direcção Municipal de Energia e Águas
+        $author = Areas::create([
+            'depart_id' => 17,
+            'name_area' => 'Secção de Serviços Municipalizados de Energia',
+            'slogan_area' => 'SSME',
+            'telefone_area' => '941492036',
+            'email_area' => 'servicos.municipalizados.energia@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal de Energia e Águas',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 17,
+            'name_area' => 'Secção de Serviços Municipalizados das Águas',
+            'slogan_area' => 'SSMA',
+            'telefone_area' => '941492037',
+            'email_area' => 'servicos.municipalizados.aguas@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal de Energia e Águas',
+        ]);
+
+        #18
+        // Direcção Municipal de Infra-Estruturas, Ordenamento do Território e Habitação
+        $author = Areas::create([
+            'depart_id' => 18,
+            'name_area' => 'Secção do Ordenamento do Território',
+            'slogan_area' => 'SOT',
+            'telefone_area' => '941492038',
+            'email_area' => 'ordenamento.territorio@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal de Infra-Estruturas, Ordenamento do Território e Habitação',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 18,
+            'name_area' => 'Secção de Habitação',
+            'slogan_area' => 'SH',
+            'telefone_area' => '941492039',
+            'email_area' => 'habitacao@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal de Infra-Estruturas, Ordenamento do Território e Habitação',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 18,
+            'name_area' => 'Secção de Infra-Estruturas',
+            'slogan_area' => 'SI',
+            'telefone_area' => '941492040',
+            'email_area' => 'infra.estruturas@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal de Infra-Estruturas, Ordenamento do Território e Habitação',
+        ]);
+
+        #19
+        // Direcção Municipal de Agricultura, Pecuária e Pescas
+        $author = Areas::create([
+            'depart_id' => 19,
+            'name_area' => 'Secção de Agricultura',
+            'slogan_area' => 'SA',
+            'telefone_area' => '941492041',
+            'email_area' => 'agricultura@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal de Agricultura, Pecuária e Pescas',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 19,
+            'name_area' => 'Secção de Pecuária e Pescas',
+            'slogan_area' => 'SPP',
+            'telefone_area' => '941492042',
+            'email_area' => 'pecuaria.pescas@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal de Agricultura, Pecuária e Pescas',
+        ]);
+
+        #20
+        // Direcção Municipal dos Registos e Modernização Administrativa
+        $author = Areas::create([
+            'depart_id' => 20,
+            'name_area' => 'Secção de Administração Pública e Trabalho',
+            'slogan_area' => 'SAPT',
+            'telefone_area' => '941492043',
+            'email_area' => 'adminstracao.publica.trabalho@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal dos Registos e Modernização Administrativas',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 20,
+            'name_area' => 'Secção de Registo Eleitoral, Recenseamento Militar e Organização do Território',
+            'slogan_area' => 'SRERMOT',
+            'telefone_area' => '941492044',
+            'email_area' => 'registo.eleitoral@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal dos Registos e Modernização Administrativas',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 20,
+            'name_area' => 'Secção de Modernização Administrativa e Gestão do Balcão Único de Atendimento ao Público (BUAP)',
+            'slogan_area' => 'BUAP',
+            'telefone_area' => '941492045',
+            'email_area' => 'registo.eleitoral@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal dos Registos e Modernização Administrativas',
+        ]);
+
+        #21
+        // Direcção Municipal de Tempos Livres, Juventude e Desportos)
+        $author = Areas::create([
+            'depart_id' => 21,
+            'name_area' => 'Secção de Tempos Livres',
+            'slogan_area' => 'STL',
+            'telefone_area' => '941492046',
+            'email_area' => 'tempos.livres@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal de Tempos Livres, Juventude e Desportos)',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 21,
+            'name_area' => 'Secção de Juventude e Desporto',
+            'slogan_area' => 'SJD',
+            'telefone_area' => '941492047',
+            'email_area' => 'tempos.livres@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal de Tempos Livres, Juventude e Desportos)',
+        ]);
+
+        #22
+        // Direcção Municipal de Fiscalização e Inspecção das Actividades Económicas e Segurança Alimentar
+        $author = Areas::create([
+            'depart_id' => 22,
+            'name_area' => 'Secção Municipal de Fiscalização',
+            'slogan_area' => 'SMF',
+            'telefone_area' => '941492048',
+            'email_area' => 'municipal.fiscalizacao@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal de Fiscalização e Inspecção das Actividades Económicas e Segurança Alimentar',
+        ]);
+
+        $author = Areas::create([
+            'depart_id' => 22,
+            'name_area' => 'Secção Municipal de Inspecção das Actividades Económicos e Segurança Alimentar',
+            'slogan_area' => 'SMIAESA',
+            'telefone_area' => '941492049',
+            'email_area' => 'municipal.inspecao.actividades@gmail.com',
+            'descricao_area' => 'Área da Direcção Municipal de Fiscalização e Inspecção das Actividades Económicas e Segurança Alimentar',
+        ]);
+    }
+}

@@ -1,0 +1,65 @@
+import { useParams, Link } from "react-router-dom"
+import { Button } from "@/components/ui/button"
+import { ChevronLeftIcon, Loader2, Tags } from "lucide-react"
+import { useEditForm } from "@/features/doc-type/hooks/forms/useEditForm"
+import { DocTypeForm } from "@/features/doc-type/components/doc-type-form"
+
+export default function EditDocType() {
+  const { id } = useParams()
+
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    onSubmit,
+    errors,
+    isValid,
+    isPending,
+    isLoading,
+    tipoDocumento,
+    temporalidades
+  } = useEditForm(id)
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center h-40">
+        <Loader2 className="w-6 h-6 animate-spin" />
+      </div>
+    )
+  }
+
+  return (
+    <>
+      <div className="pt-2 pl-4">
+        <Link to='/dashboard/doc-types'>
+          <Button variant="link" className="gap-1">
+            <ChevronLeftIcon className="opacity-60" size={16} />
+            Voltar
+          </Button>
+        </Link>
+      </div>
+
+      <div className="space-y-2 text-center">
+        <div className="flex items-center justify-center space-x-2">
+          <h1 className="text-3xl font-medium">Editar Tipo de documento</h1>
+        </div>
+        <p className="text-muted-foreground">
+          Atualize os dados abaixo para editar o tipo de documento no sistema
+        </p>
+      </div>
+
+      <DocTypeForm
+        register={register}
+        handleSubmit={handleSubmit}
+        setValue={setValue}
+        onSubmit={onSubmit}
+        errors={errors}
+        isValid={isValid}
+        isPending={isPending}
+        doc_type={tipoDocumento}
+        temporalidades={temporalidades}
+        isEdit={true}
+      />
+    </>
+  )
+}

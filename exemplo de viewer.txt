@@ -1,0 +1,141 @@
+"use client"
+
+import { useState } from "react"
+import { Document, Page, pdfjs } from "react-pdf"
+import { Button } from "@/components/ui/button"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { ZoomIn, ZoomOut, ChevronLeft, ChevronRight, MoreVertical, Download, Printer, X } from "lucide-react"
+
+// Configuração obrigatória do worker
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`
+
+export default function PDFViewer() {
+  const [currentPage, setCurrentPage] = useState(1)
+  const [totalPages, setTotalPages] = useState(null)
+  const [zoomLevel, setZoomLevel] = useState(100)
+
+  const handleZoomIn = () => setZoomLevel((prev) => Math.min(prev + 25, 200))
+  const handleZoomOut = () => setZoomLevel((prev) => Math.max(prev - 25, 50))
+  const handlePrevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1))
+  const handleNextPage = () => setCurrentPage((prev) => Math.min(prev + 1, totalPages || 1))
+
+  const handleDownload = () => {
+    const link = document.createElement("a")
+    link.href = "/documento.pdf" // coloca o caminho real do PDF
+    link.download = "documento.pdf"
+    link.click()
+  }
+
+  const handlePrint = () => {
+    window.open("/documento.pdf", "_blank")?.print()
+  }
+
+  const handleClose = () => {
+    console.log("Fechar viewer")
+  }
+
+  return (
+    <div className="flex flex-col h-full bg-background">
+      {/* Top Bar */}
+      <div className="flex items-center justify-between px-4 py-2 border-b border-border bg-card">
+        {/* Controles */}
+        <div className="flex items-center gap-2">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={handleZoomOut}
+            disabled={zoomLevel <= 50}
+            className="w-8 h-8 p-0 bg-transparent"
+          >
+            <ZoomOut className="w-4 h-4" />
+          </Button>
+
+          <span className="text-sm text-muted-foreground min-w-[60px] text-center">{zoomLevel}%</span>
+
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={handleZoomIn}
+            disabled={zoomLevel >= 200}
+            className="w-8 h-8 p-0"
+          >
+            <ZoomIn className="w-4 h-4" />
+          </Button>
+
+          <div className="w-px h-4 mx-2 bg-border" />
+
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={handlePrevPage}
+            disabled={currentPage <= 1}
+            className="w-8 h-8 p-0 bg-transparent"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </Button>
+
+          <span className="text-sm text-muted-foreground min-w-[80px] text-center">
+            {currentPage} de {totalPages || "?"}
+          </span>
+
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={handleNextPage}
+            disabled={!totalPages || currentPage >= totalPages}
+            className="w-8 h-8 p-0"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </Button>
+        </div>
+
+        {/* Menu */}
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline" size="sm" className="w-8 h-8 p-0 bg-transparent">
+              <MoreVertical className="w-4 h-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-40">
+            <DropdownMenuItem onClick={handleDownload}>
+              <Download className="w-4 h-4 mr-2" />
+              Baixar
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={handlePrint}>
+              <Printer className="w-4 h-4 mr-2" />
+              Imprimir
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={handleClose}>
+              <X className="w-4 h-4 mr-2" />
+              Fechar
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+
+      {/* Área do PDF real */}
+      <div className="flex-1 p-4 overflow-auto bg-muted/30">
+        <div className="flex justify-center max-w-4xl mx-auto">
+          <Document
+            file="/documento.pdf" // coloca teu PDF aqui
+            onLoadSuccess={({ numPages }) => setTotalPages(numPages)}
+            loading={<p>Carregando PDF...</p>}
+            error={<p>Falha ao carregar PDF</p>}
+          >
+            <Page pageNumber={currentPage} scale={zoomLevel / 100} />
+          </Document>
+        </div>
+      </div>
+
+      {/* Rodapé */}
+      <div className="px-4 py-2 border-t border-border bg-card">
+        <div className="flex items-center justify-between text-sm text-muted-foreground">
+          <span>documento.pdf</span>
+          <span>
+            Zoom: {zoomLevel}% • Página {currentPage}/{totalPages || "?"}
+          </span>
+        </div>
+      </div>
+    </div>
+  )
+}
